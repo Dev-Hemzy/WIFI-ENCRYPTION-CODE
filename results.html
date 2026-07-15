@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Home Network Security Evaluation</h1>
+<h2>Chapter Four Results</h2>
+
+<div class="card">
+    <h3>1. Wi-Fi Encryption Status</h3>
+    <form id="wifiForm" class="quiz-form">
+        <p>Which Wi-Fi security standard is the strongest modern option?</p>
+        <label><input type="radio" name="wifi-answer" value="wep"> WEP</label><br>
+        <label><input type="radio" name="wifi-answer" value="wpa2"> WPA2</label><br>
+        <label><input type="radio" name="wifi-answer" value="wpa3"> WPA3</label><br>
+        <button type="submit">Check Answer</button>
+    </form>
+    <p id="wifiResult" class="result-text">Waiting for result...</p>
+</div>
+
+<div class="card">
+    <h3>2. Network Segmentation Status</h3>
+    <form id="segmentForm" class="quiz-form">
+        <p>Which practice helps keep main, guest, and IoT devices separate?</p>
+        <label><input type="radio" name="segment-answer" value="sharing"> Shared access</label><br>
+        <label><input type="radio" name="segment-answer" value="segmentation"> Network segmentation</label><br>
+        <label><input type="radio" name="segment-answer" value="open"> Open network</label><br>
+        <button type="submit">Check Answer</button>
+    </form>
+    <p id="segmentStatus" class="result-text">Waiting for result...</p>
+</div>
+
+<div class="card">
+    <h3>3. Authentication Test Results</h3>
+    <form id="authForm" class="quiz-form">
+        <p>What should happen to unauthorized devices on a secure network?</p>
+        <label><input type="radio" name="auth-answer" value="allow"> Allow them</label><br>
+        <label><input type="radio" name="auth-answer" value="blocked"> Block them</label><br>
+        <label><input type="radio" name="auth-answer" value="ignore"> Ignore them</label><br>
+        <button type="submit">Check Answer</button>
+    </form>
+    <p id="authStatus" class="result-text">Waiting for result...</p>
+</div>
+
+<div class="card">
+    <h3>4. Security Level</h3>
+    <form id="securityForm" class="quiz-form">
+        <p>Which label best describes a well-protected home network?</p>
+        <label><input type="radio" name="security-answer" value="low"> Low security</label><br>
+        <label><input type="radio" name="security-answer" value="high"> High security</label><br>
+        <label><input type="radio" name="security-answer" value="weak"> Weak security</label><br>
+        <button type="submit">Check Answer</button>
+    </form>
+    <p id="securityStatus" class="result-text">Unknown</p>
+</div>
+
+<div class="card">
+    <h3>5. Connected Network Segments</h3>
+
+    <table class="table">
+
+        <tr>
+            <th>Segment</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>Main Network</td>
+            <td id="mainNet">Protected</td>
+        </tr>
+
+        <tr>
+            <td>Guest Network</td>
+            <td id="guestNet">Isolated</td>
+        </tr>
+
+        <tr>
+            <td>IoT Network</td>
+            <td id="iotNet">Isolated</td>
+        </tr>
+
+    </table>
+
+</div>
+
+<div class="card">
+
+<h3>6. Overall Security Evaluation</h3>
+
+<p id="evaluation">
+
+Click the button below to evaluate the network.
+
+</p>
+
+</div>
+
+<button onclick="evaluateNetwork()">
+
+Run Full Evaluation
+
+</button>
+
+<br><br>
+
+<a href="index.html">
+<button>Back to Dashboard</button>
+</a>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
